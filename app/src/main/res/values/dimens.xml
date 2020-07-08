@@ -4,5 +4,6 @@
     <dimen name="anchoappbar">50dp</dimen>
     <dimen name="margincvHuesos">20dp</dimen>
     <dimen name="tamanioTextoCV">20sp</dimen>
-    <dimen name="tamanioImagenActionBar">35dp</dimen>
+    <dimen name="tamanioImagenCardView">35dp</dimen>
+    <dimen name="tamanioImageActionBar">45dp</dimen>
 </resources>

@@ -39,6 +39,7 @@ public class PerroAdaptador extends RecyclerView.Adapter<PerroAdaptador.PerroVie
                 Toast.makeText(v.getContext(), "Entra",Toast.LENGTH_LONG).show();
             }
         });
+
     }
 
     @Override

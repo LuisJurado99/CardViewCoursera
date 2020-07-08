@@ -26,8 +26,8 @@
 
             <ImageView
                 android:id="@+id/imgHuesoCVContacto"
-                android:layout_width="@dimen/tamanioImagenActionBar"
-                android:layout_height="@dimen/tamanioImagenActionBar"
+                android:layout_width="@dimen/tamanioImagenCardView"
+                android:layout_height="@dimen/tamanioImagenCardView"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="@dimen/margincvHuesos"
                 android:src="@drawable/hueso" />
@@ -55,8 +55,8 @@
 
             <ImageView
                 android:id="@+id/imgHuesoColorCVContacto"
-                android:layout_width="@dimen/tamanioImagenActionBar"
-                android:layout_height="@dimen/tamanioImagenActionBar"
+                android:layout_width="@dimen/tamanioImagenCardView"
+                android:layout_height="@dimen/tamanioImagenCardView"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="@dimen/margincvHuesos"
                 android:foregroundGravity="center"
