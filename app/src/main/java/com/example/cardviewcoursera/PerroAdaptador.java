@@ -1,8 +1,11 @@
 package com.example.cardviewcoursera;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,6 +16,8 @@ import java.util.ArrayList;
 
 public class PerroAdaptador extends RecyclerView.Adapter<PerroAdaptador.PerroViewHolder> {
     ArrayList<Perro> perro;
+    ArrayList<Perro> perroLike = new ArrayList<Perro>();
+
 
     public PerroAdaptador(ArrayList<Perro> perro) {
         this.perro = perro;
@@ -28,15 +33,17 @@ public class PerroAdaptador extends RecyclerView.Adapter<PerroAdaptador.PerroVie
 
     //Asocia cada elemento de la lista con cada view
     @Override
-    public void onBindViewHolder(final PerroViewHolder perroViewHolder, int position) {
-        Perro perros = perro.get(position);
+    public void onBindViewHolder(final PerroViewHolder perroViewHolder, final int position) {
+        final Perro perros = perro.get(position);
         perroViewHolder.imgFoto.setImageResource(perros.getFoto());
         perroViewHolder.tvNombreCV.setText(perros.getNombre());
         perroViewHolder.tvRango.setText(perros.getRango()+"");
-        perroViewHolder.imgFoto.setOnClickListener(new View.OnClickListener() {
+        perroViewHolder.imgHuesoLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(), "Entra",Toast.LENGTH_LONG).show();
+                perroLike.add(new Perro(perros.getNombre(),perros.getRango(),perros.getFoto()));
+                Toast.makeText(v.getContext(),perros.getNombre()+perros.getRango()+perros.getFoto(),
+            Toast.LENGTH_LONG).show();
             }
         });
 
@@ -51,12 +58,15 @@ public class PerroAdaptador extends RecyclerView.Adapter<PerroAdaptador.PerroVie
         public ImageView imgFoto;
         public TextView tvNombreCV;
         public TextView tvRango;
+        public ImageView imgHuesoLike;
         public PerroViewHolder(@NonNull View itemView) {
             super(itemView);
+            imgHuesoLike= itemView.findViewById(R.id.imgHuesoColorCVContacto);
             imgFoto     = (ImageView) itemView.findViewById(R.id.imgFotoCV);
             tvNombreCV  = (TextView) itemView.findViewById(R.id.tvNombreCV);
             tvRango     = (TextView) itemView.findViewById(R.id.tvRango);
         }
 
     }
+
 }

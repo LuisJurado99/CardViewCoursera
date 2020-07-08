@@ -49,11 +49,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_toStartOf="@+id/imgHuesoColorCVContacto"
-
                 android:text="5"
                 android:textSize="28sp" />
 
             <ImageView
+                android:onClick="agregarLike"
                 android:id="@+id/imgHuesoColorCVContacto"
                 android:layout_width="@dimen/tamanioImagenCardView"
                 android:layout_height="@dimen/tamanioImagenCardView"
