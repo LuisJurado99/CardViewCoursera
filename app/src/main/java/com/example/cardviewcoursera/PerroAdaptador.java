@@ -50,12 +50,12 @@ public class PerroAdaptador extends RecyclerView.Adapter<PerroAdaptador.PerroVie
         public ImageView imgFoto;
         public TextView tvNombreCV;
         public TextView tvRango;
-
         public PerroViewHolder(@NonNull View itemView) {
             super(itemView);
-            imgFoto = (ImageView) itemView.findViewById(R.id.imgFotoCV);
-            tvNombreCV = (TextView) itemView.findViewById(R.id.tvNombreCV);
-            tvRango = (TextView) itemView.findViewById(R.id.tvRango);
+            imgFoto     = (ImageView) itemView.findViewById(R.id.imgFotoCV);
+            tvNombreCV  = (TextView) itemView.findViewById(R.id.tvNombreCV);
+            tvRango     = (TextView) itemView.findViewById(R.id.tvRango);
         }
+
     }
 }

@@ -1,10 +1,16 @@
 package com.example.cardviewcoursera;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.appcompat.widget.Toolbar;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar miAToolbar = (Toolbar) findViewById(R.id.acBar);
         setSupportActionBar(miAToolbar);
         listaContactos = (RecyclerView) findViewById(R.id.rvMainBase);
-        GridLayoutManager glm = new GridLayoutManager(this,2);
-        listaContactos.setLayoutManager(glm);
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        listaContactos.setLayoutManager(llm);
         perros = new ArrayList<Perro>();
         perros.add(new Perro("Luis Jurado",10, R.drawable.perro));
         perros.add(new Perro("Ceci Jurado", 6, R.drawable.perro2));
